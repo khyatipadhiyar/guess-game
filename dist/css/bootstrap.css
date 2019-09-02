@@ -9,8 +9,21 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+#div1{ display:none;}
+#div2{ display:none;}
+#game{
+        margin: 5px;
+        border: 3px solid #73AD21;
+        padding:25px;
+    };
+
+    #number{
+      cursor: auto;
+    }
+
 body {
-  margin: 0;
+  margin: 25px;
+  font-size: 24px;
 }
 article,
 aside,
