@@ -95,7 +95,7 @@ var countSubmit = 0;
 var countLimit = 7;
 function computerAssume()
 {
-	computerNumber=(Math.floor(Math.random() * 100));
+	computerNumber=(Math.floor(Math.random() * 101));
 	//console.log( computerNumber)
 			document.getElementById('numbererror').innerHTML="";
 			document.getElementById("counter").innerHTML="";
