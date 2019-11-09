@@ -1,9 +1,5 @@
 function saveNumber()
 {
-
-
-	console.log(computerNumber);
-	console.log("starting saveN");
 	var guessNumber=document.getElementById("number").value;
 	var stat = validation(guessNumber);
 	if (stat==true) 
@@ -26,31 +22,25 @@ function saveNumber()
 		{
 			alert("You Guessed My Number !!!! You Win");
 			$(document).ready(function(){
-    		$("#div1").fadeOut(500);
-    		$("#div2").fadeOut(500);
+    			$("#div1").fadeOut(500);
+    			$("#div2").fadeOut(500);
 			});
 		}
-
 		if((countSubmit==7)&&(computerNumber!=guessNumber))
 		{
 			alert("Game Over!!!! You Loose, My Number Was "+computerNumber);
 			$(document).ready(function(){
-    		$("#div1").fadeOut(1000);
-    		$("#div2").fadeOut(1000);
+    			$("#div1").fadeOut(1000);
+    			$("#div2").fadeOut(1000);
 			});
-
 		}
 	}else{
-			console.log("validation fail");
+		console.log("validation fail");
 	}
-	
 	clear();
 }
-
-
 function validation(gNumber)
 {
-	
 	var status=true;
 	if ((gNumber=="")||(isNaN(gNumber)))
 	{
@@ -77,27 +67,21 @@ function validation(gNumber)
 			document.getElementById('numbererror').innerHTML=msg;
 			status=false;
 		}
-		
-
 	}
 	
 	return status;
 }
-
 function clear()
 {
 	document.getElementById('number').value="";
-
 }
-
 var computerNumber;
 var countSubmit = 0;
 var countLimit = 7;
 function computerAssume()
 {
 	computerNumber=(Math.floor(Math.random() * 101));
-	//console.log( computerNumber)
-			document.getElementById('numbererror').innerHTML="";
-			document.getElementById("counter").innerHTML="";
-			countSubmit = 0;
+	document.getElementById('numbererror').innerHTML="";
+	document.getElementById("counter").innerHTML="";
+	countSubmit = 0;
 }
